@@ -1,5 +1,5 @@
 // const { descendingOrder } = require('../katas_1')
-const { findOdd } = require('../katas_2')
+const { findOdd } = require('../kata_2')
 
 /* matchers    
 toBeNull matches only null

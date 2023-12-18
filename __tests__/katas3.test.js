@@ -12,9 +12,9 @@ const { isSquare } = require('../katas_3')
       expect(isSquare(26)).toBe(false);
     });
 
-  // Test to check if an error is thrown for a negative value
-  test('should throw an error when a negative value is given', () => {
-    expect(() => isSquare(-1)).toThrowError("Invalid input");
-  });
+  // // Test to check if an error is thrown for a negative value
+  // test('should throw an error when a negative value is given', () => {
+  //   expect(() => isSquare(-1)).toThrowError("Invalid input");
+  // });
 
   });

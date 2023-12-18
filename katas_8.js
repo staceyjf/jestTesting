@@ -10,4 +10,4 @@ var maxSequence = function(arr){
     return maxSum;
 }
 
-  module.exports = maxSequence
+module.exports = maxSequence

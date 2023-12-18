@@ -1,4 +1,4 @@
-const { openOrSenior } = require('../katas_6');
+const  openOrSenior = require('../katas_6');
 
 describe('openOrSenior', () => {
     // should return open for all 4 members

@@ -6,4 +6,4 @@ function openOrSenior(data){
     }, [])
   }
 
-  module.exports = { openOrSenior }
+  module.exports =  openOrSenior 
