@@ -10,4 +10,11 @@ describe('domainName', () => {
     test('should return', ()=> {
         expect(domainName("http://www.zombie-bites.com")).toEqual("zombie-bites")
     })
+
+    // test to parse out the domain name with unconvntional ends
+    test('should return', ()=> {
+        expect(domainName("www.xakep.ru")).toEqual("xakep")
+    })
+
+    
 } )
