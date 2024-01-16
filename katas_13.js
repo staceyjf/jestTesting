@@ -51,7 +51,6 @@ function topThreeWords(text) {
     
     helper(top_word, second_word, third_word);
 
-    console.log(result)
     return result;
 }
 
