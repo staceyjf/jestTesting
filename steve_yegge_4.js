@@ -1,29 +1,28 @@
-const times_table = function(row, column) {
-    // either row a zero
-    if ( row === 0 || column === 0) {
-        console.log('The output would be zero')
-        return 'The output would be zero'
-    // print row 1
-    } else {
+const fs = require('fs').promises;
 
-        function print_row(current_row, current_column) {
-            if (current_row === 0) {
-                return; // exit the recursion
-            }
+const sum_of_textinput = async function(nums) {
+    let file;
+    let sum = 0;
 
-            let sum = current_row * current_column
-            console.log(sum)
+    try {
+        file = 'textfile.txt'; 
+        await fs.writeFile(file, nums); // write to a file. once is created if it doesn't exist
 
-            if (current_column > 1) {
-                print_row(current_row, current_column - 1) // enable it to move through the columns
-            } else {
-                print_row(current_row - 1, column) // reset column
-            }
-        }
+        // read the file
+        const content = await fs.readFile(file, 'utf8'); // read the file - outputs are strs
+        const num_arr = content.split('\n'); // convert to array
 
-        print_row(row, column)
+        // convert the elements to numbers and add them to sum
+        num_arr.map((str_int) => {
+            sum += Number(str_int);
+        });
+        
+        return sum;
+    } catch (err) {
+        console.log(err);
+    } 
 
-    }
-}
+    return sum;
+};
 
-module.exports = times_table
+module.exports = sum_of_textinput;
